@@ -41,5 +41,14 @@ test('Clicking option thrice works fine', () => {
 	fireEvent.click(screen.getByText('New York'))
 	fireEvent.click(screen.getByText('Jeff Bezos'))
 	fireEvent.click(screen.getByText('Apple'))
-	expect(screen.getByText('How many Harry Potter'))
+	expect(screen.getByText('How many Harry Potter books are there?'))
+})
+
+test('Clicking option 4 times works fine', () => {
+	render(<App />)
+	fireEvent.click(screen.getByText('New York'))
+	fireEvent.click(screen.getByText('Jeff Bezos'))
+	fireEvent.click(screen.getByText('Apple'))
+	fireEvent.click(screen.getByText('6'))
+	expect(screen.getByText('You scored 1 out of', { exact: false }))
 })
