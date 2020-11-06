@@ -41,5 +41,5 @@ test('Clicking option thrice works fine', () => {
 	fireEvent.click(screen.getByText('New York'))
 	fireEvent.click(screen.getByText('Jeff Bezos'))
 	fireEvent.click(screen.getByText('Apple'))
-	expect(screen.getByText('How many Harry Potter'))
+	expect(screen.getByText('How many Harry Potter books are there?'))
 })
